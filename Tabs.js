@@ -29,11 +29,11 @@ const Tabs = () => {
                 tabBarIcon: ({focused}) => (
                     <View style={{alignItems: 'center', justifyContent: 'center', top: 10}}>
                         <Image
-                            source={require('')} //insert the image path when image is made
+                            source={require('./assets/calendar.png')} //insert the image path when image is made
                             resizeMode='contain'
                             style={{
-                                width: 25,
-                                height: 25,
+                                width: 56,
+                                height: 50,
 
                             }}
                         />
@@ -43,9 +43,60 @@ const Tabs = () => {
             
         }}
             />
-            <Tab.Screen name="qibla" component={QiblaScreen}/>
-            <Tab.Screen name="prayerTimes" component={PrayerTimeScreen}/>
-            <Tab.Screen name="donate" component={DonationScreen}/>    
+            <Tab.Screen name="qibla" component={QiblaScreen} options={{
+                tabBarIcon: ({focused}) => (
+                    <View style={{alignItems: 'center', justifyContent: 'center', top: 10}}>
+                        <Image
+                            source={require('./assets/qibla2.png')} //insert the image path when image is made
+                            resizeMode='contain'
+                            style={{
+                                width: 50,
+                                height: 50,
+
+                            }}
+                        />
+                        <Text style={{color: '#000000', fontSize: 12}}>Qibla</Text>
+                    </View>
+                )
+            
+        }}
+            />
+            <Tab.Screen name="prayerTimes" component={PrayerTimeScreen} options={{
+                tabBarIcon: ({focused}) => (
+                    <View style={{alignItems: 'center', justifyContent: 'center', top: 10}}>
+                        <Image
+                            source={require('./assets/prayer-time.png')} //insert the image path when image is made
+                            resizeMode='contain'
+                            style={{
+                                width: 50,
+                                height: 50,
+
+                            }}
+                        />
+                        <Text style={{color: '#000000', fontSize: 12}}>Prayer Time</Text>
+                    </View>
+                )
+            
+        }}
+            />
+            <Tab.Screen name="donate" component={DonationScreen} options={{
+                tabBarIcon: ({focused}) => (
+                    <View style={{alignItems: 'center', justifyContent: 'center', top: 10}}>
+                        <Image
+                            source={require('./assets/donate.png')} //insert the image path when image is made
+                            resizeMode='contain'
+                            style={{
+                                width: 50,
+                                height: 50,
+
+                            }}
+                        />
+                        <Text style={{color: '#000000', fontSize: 12}}>Donations</Text>
+                    </View>
+                )
+            
+        }}
+            />   
         </Tab.Navigator>
     );
 }
