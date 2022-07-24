@@ -15,13 +15,13 @@ const Tabs = () => {
                 showLabel: false,
                 style: {
                     position: 'absolute',
-                    bottom: 25,
+                    bottom: 10,
                     left: 20,
                     right: 20,
                     elevation: 0,
                     backgrounColor: '#ffffff',
                     borderRadius: 15,
-                    height: 90,
+                    height: 100,
                 }
             }}
         >
@@ -32,7 +32,7 @@ const Tabs = () => {
                             source={require('./assets/calendar.png')} //insert the image path when image is made
                             resizeMode='contain'
                             style={{
-                                width: 56,
+                                width: 50,
                                 height: 50,
 
                             }}
@@ -47,7 +47,7 @@ const Tabs = () => {
                 tabBarIcon: ({focused}) => (
                     <View style={{alignItems: 'center', justifyContent: 'center', top: 10}}>
                         <Image
-                            source={require('./assets/qibla2.png')} //insert the image path when image is made
+                            source={require('./assets/qibla.png')} //insert the image path when image is made
                             resizeMode='contain'
                             style={{
                                 width: 50,
@@ -65,7 +65,7 @@ const Tabs = () => {
                 tabBarIcon: ({focused}) => (
                     <View style={{alignItems: 'center', justifyContent: 'center', top: 10}}>
                         <Image
-                            source={require('./assets/prayer-time.png')} //insert the image path when image is made
+                            source={require('./assets/prayer-clock.png')} //insert the image path when image is made
                             resizeMode='contain'
                             style={{
                                 width: 50,
@@ -73,7 +73,7 @@ const Tabs = () => {
 
                             }}
                         />
-                        <Text style={{color: '#000000', fontSize: 12}}>Prayer Time</Text>
+                        <Text style={{color: '#000000', fontSize: 12}}>Prayers</Text>
                     </View>
                 )
             
@@ -91,7 +91,7 @@ const Tabs = () => {
 
                             }}
                         />
-                        <Text style={{color: '#000000', fontSize: 12}}>Donations</Text>
+                        <Text style={{color: '#000000', fontSize: 12}}>Donate</Text>
                     </View>
                 )
             
