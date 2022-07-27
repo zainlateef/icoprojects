@@ -43,7 +43,7 @@ const Tabs = () => {
             
         }}
             />
-            <Tab.Screen name="qibla" component={QiblaScreen} options={{
+            <Tab.Screen name="Qibla" component={QiblaScreen} options={{
                 tabBarIcon: ({focused}) => (
                     <View style={{alignItems: 'center', justifyContent: 'center', top: 10}}>
                         <Image
