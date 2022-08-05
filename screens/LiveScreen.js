@@ -2,17 +2,19 @@ import React, {Component} from 'react';
 
 import { View, Text, Button, StyleSheet } from 'react-native';
 
-const PrayerTimeScreen = ({navigation}) => {
+const LiveScreen = ({navigation}) => {
     return (
         <View style={StyleSheet.container}>
-            <Text>Prayer Time Screen</Text>
-            
-                
+            <Text>Live Screen</Text>
+            <Button 
+                title="Click Here"
+                onPress={() => alert('Button Clicked!')}
+                />
         </View>
-    )
+    );
 }
 
-export default PrayerTimeScreen;
+export default LiveScreen;
 const styles = StyleSheet.create({
     container: {
         flex: 1,

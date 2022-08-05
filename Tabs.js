@@ -5,7 +5,8 @@ import EventScreen from "./screens/EventScreen";
 import QiblaScreen from "./screens/QiblaScreen";
 import PrayerTimeScreen from "./screens/PrayerTimeScreen";
 import DonationScreen from "./screens/DonationScreen";
-
+import AnnouncementsScreen from './screens/AnnouncementsScreen';
+import LiveScreen from './screens/LiveScreen';
 const Tab = createBottomTabNavigator();
 
 const Tabs = () => {
@@ -25,6 +26,24 @@ const Tabs = () => {
                 }
             }}
         >
+             <Tab.Screen name="announcements" component={AnnouncementsScreen} options={{
+                tabBarIcon: ({focused}) => (
+                    <View style={{alignItems: 'center', justifyContent: 'center', top: 10}}>
+                        <Image
+                            source={require('./assets/messages.png')} //insert the image path when image is made
+                            resizeMode='contain'
+                            style={{
+                                width: 50,
+                                height: 50,
+
+                            }}
+                        />
+                        <Text style={{color: '#000000', fontSize: 12}}>News</Text>
+                    </View>
+                )
+            
+        }}
+            />
             <Tab.Screen name="events" component={EventScreen} options={{
                 tabBarIcon: ({focused}) => (
                     <View style={{alignItems: 'center', justifyContent: 'center', top: 10}}>
@@ -97,6 +116,24 @@ const Tabs = () => {
             
         }}
             />   
+             <Tab.Screen name="live" component={LiveScreen} options={{
+                tabBarIcon: ({focused}) => (
+                    <View style={{alignItems: 'center', justifyContent: 'center', top: 10}}>
+                        <Image
+                            source={require('./assets/live.png')} //insert the image path when image is made
+                            resizeMode='contain'
+                            style={{
+                                width: 50,
+                                height: 50,
+
+                            }}
+                        />
+                        <Text style={{color: '#000000', fontSize: 12}}>Live</Text>
+                    </View>
+                )
+            
+        }}
+            />
         </Tab.Navigator>
     );
 }

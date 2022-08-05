@@ -25,7 +25,7 @@ export default QiblaScreen = () => {
       }
 
       let location = await Location.getCurrentPositionAsync({});
-      setLatitude(location.coords.latitude)
+      setLatitude(location.coords.latitude);
       setLongitude(location.coords.longitude);
       setLocation(location.coords);
     })();
@@ -74,8 +74,8 @@ export default QiblaScreen = () => {
   const _angle = (magnetometer) => {
     let angle = 0;
     if (magnetometer) {
-      let { x, y, z } = magnetometer;
-      if (Math.atan2(y, x) >= 0) {
+      let { x, y } = magnetometer;
+      if (Math.atan2(y, x, z ) >= 0) {
         angle = Math.atan2(y, x) * (180 / Math.PI);
       } else {
         angle = (Math.atan2(y, x) + 2 * Math.PI) * (180 / Math.PI);
