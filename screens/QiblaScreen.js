@@ -25,7 +25,7 @@ export default QiblaScreen = () => {
       }
 
       let location = await Location.getCurrentPositionAsync({});
-      setLatitude(location.coords.latitude)
+      setLatitude(location.coords.latitude);
       setLongitude(location.coords.longitude);
       setLocation(location.coords);
     })();
@@ -99,7 +99,7 @@ export default QiblaScreen = () => {
 
   // Match the device top with pointer 0° degree. (By default 0° starts from the right of the device.)
   const _degree = (magnetometer) => {
-    return magnetometer - 90 >= 0 ? magnetometer - 90 : magnetometer + 271;
+    return magnetometer -90 >= 0 ? magnetometer - 90 : magnetometer + 271;
   };
 
   return (
