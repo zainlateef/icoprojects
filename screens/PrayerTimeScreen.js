@@ -29,29 +29,34 @@ export default function PrayerTimeScreen() {
       {value.map((files, index) => (
         <Card key={index} style={styles.container}>
           <Card.Title
-            title={!files[1] ? "Not Provided" : files[1]}
-            left={() => <Ionicons name="md-person" size={50} color="#fff" />}
+            title={<Text style={styles.title}>Prayer Times</Text>}
           />
           <Card.Content style={styles.content}>
-            <Text style={styles.title}>S.No:</Text>
+            <Text style={styles.title}>Fajr:</Text>
             <Text style={styles.paragraph}>
               {!files[0] ? "Not Given" : files[0]}
             </Text>
           </Card.Content>
           <Card.Content style={styles.content}>
-            <Text style={styles.title}>Class:</Text>
+            <Text style={styles.title}>Dhuhr:</Text>
+            <Text style={styles.paragraph}>
+              {!files[1] ? "Not Given" : files[1]}
+            </Text>
+          </Card.Content>
+          <Card.Content style={styles.content}>
+            <Text style={styles.title}>Asr:</Text>
             <Text style={styles.paragraph}>
               {!files[3] ? "Not Provided" : files[2]}
             </Text>
           </Card.Content>
           <Card.Content style={styles.content}>
-            <Text style={styles.title}>Subject:</Text>
+            <Text style={styles.title}>Maghrib</Text>
             <Text style={styles.paragraph}>
               {!files[4] ? "Not Provided" : files[3]}
             </Text>
           </Card.Content>
           <Card.Content style={styles.content}>
-            <Text style={styles.title}>Grade:</Text>
+            <Text style={styles.title}>Isha:</Text>
             <Text style={styles.paragraph}>
               {!files[2] ? "Not Provided" : files[4]}
             </Text>
