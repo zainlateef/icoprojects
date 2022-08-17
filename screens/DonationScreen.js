@@ -1,15 +1,10 @@
 import React, {Component} from 'react';
-
+import Paypal from './Paypal';
 import { View, Text, Button, StyleSheet } from 'react-native';
-
 const DonationScreen = ({navigation}) => {
     return (
         <View style={StyleSheet.container}>
-            <Text>Donation Screen</Text>
-            <Button 
-                title="Click Here"
-                onPress={() => alert('Button Clicked!')}
-                />
+            <Paypal/>
         </View>
     );
 }
